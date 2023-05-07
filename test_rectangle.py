@@ -4,7 +4,13 @@ from rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    pass
+    def setUp(self) -> None:
+        self.sut1 = Rectangle(5, 10)
+        self.sut2 = Rectangle(23, 17)
+
+    def test_calc_area(self):
+        self.assertEqual(50, self.sut1.calc_area())
+        self.assertEqual(391, self.sut2.calc_area())
 
 
 if __name__ == '__main__':

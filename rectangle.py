@@ -3,5 +3,5 @@ class Rectangle:
         self._length = length
         self._height = height
 
-    def calc(self) -> int:
+    def calc_area(self) -> int:
         return self._length * self._height
