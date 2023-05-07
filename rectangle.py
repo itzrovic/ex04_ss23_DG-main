@@ -26,9 +26,13 @@ class RectangleList:
         return len(self._rectangles)
 
     def add(self, r: Rectangle):
+        if self.includes(r):
+            raise ValueError("rectangle already part of the list")
         self._rectangles.append(r)
 
     def remove(self, r: Rectangle):
+        if not self.includes(r):
+            raise ValueError("rectangle does not exist in the list")
         self._rectangles.remove(r)
 
     def includes(self, r) -> bool:
