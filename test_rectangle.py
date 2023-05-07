@@ -12,6 +12,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(50, self.sut1.calc_area())
         self.assertEqual(391, self.sut2.calc_area())
 
+    def test_calc_perimeter(self):
+        self.assertEqual(30, self.sut1.calc_perimeter())
+        self.assertEqual(80, self.sut2.calc_perimeter())
+
 
 if __name__ == '__main__':
     unittest.main()

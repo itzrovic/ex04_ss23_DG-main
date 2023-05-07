@@ -5,3 +5,6 @@ class Rectangle:
 
     def calc_area(self) -> int:
         return self._length * self._height
+
+    def calc_perimeter(self) -> int:
+        return 2 * self._length + 2 * self._height
